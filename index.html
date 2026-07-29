@@ -1,50 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Desarrollador de videojuegos, con interés en gestión y arte">
+    <meta name="description" data-i18n-content="meta.description" content="Desarrollador de videojuegos y software, consultor técnico especializado en integración de sistemas, DevOps y Cloud DevOps.">
     <meta name="author" content="Enrique J">
-    <title>Enrique Juan | Desarrollador de Videojuegos</title>
+    <title>Enrique Juan | Videojuegos, Software y DevOps</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
 	<link rel="stylesheet" href="assets/css/johndoe.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
     <link rel="icon" type="image/png" href="assets/imgs/res1.png">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body id="home">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="language-switcher" role="group" aria-label="Cambiar idioma" data-i18n-aria-label="language.selector">
+        <button class="language-option" type="button" data-language="es" aria-label="Cambiar a castellano" data-i18n-aria-label="language.spanish">
+            <span class="language-flag" aria-hidden="true">🇪🇸</span>
+            <span class="language-code">ES</span>
+        </button>
+        <button class="language-option" type="button" data-language="en" aria-label="Cambiar a inglés británico" data-i18n-aria-label="language.english">
+            <span class="language-flag" aria-hidden="true">🇬🇧</span>
+            <span class="language-code">EN</span>
+        </button>
+    </div>
     <header class="header">
         <div class="container">
             <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light" target="_blank" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" target="_blank" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
             </ul>  
             <div class="header-content">
-                <h1 class="header-subtitle">Enrique Juan Gamboa</h1>
+                <p class="hero-eyebrow" data-i18n="hero.technical">Software · Integración · DevOps</p>
+                <h1 class="header-title">
+                    <span class="hero-name-line hero-name-first">Enrique Juan</span>
+                    <span class="hero-name-line hero-name-last">Gamboa</span>
+                </h1>
+                <p class="header-mono" data-i18n="hero.creative">Videojuegos · Entornos interactivos · Gameplay</p>
+                <div class="hero-actions">
+                    <a class="btn btn-danger hero-cta" href="#portfolio" data-i18n="hero.portfolioCta">Ver portfolio</a>
+                    <a class="btn btn-outline-light hero-cta" href="#resume" data-i18n="hero.experienceCta">Ver experiencia</a>
+                </div>
             </div>
+            <a class="scroll-cue" href="#about" aria-label="Ir a la sección Sobre mí" data-i18n-aria-label="hero.scrollCue">
+                <span></span>
+            </a>
         </div>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
         <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir o cerrar la navegación" data-i18n-aria-label="nav.toggle">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Inicio</a>
+                        <a href="#home" class="nav-link" data-i18n="nav.home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">Sobre mí</a>
+                        <a href="#about" class="nav-link" data-i18n="nav.about">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link">CV</a>
+                        <a href="#resume" class="nav-link" data-i18n="nav.cv">CV</a>
+                    </li>
                     <li class="nav-item last-item">
-                        <a href="#contact" class="nav-link">Contacto</a>
+                        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -52,58 +80,79 @@
     </nav>
     <div class="container-fluid">
         <div id="about" class="row about-section">
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Sobre mí</h3>
+            <div class="col-lg-7 about-card about-intro">
+                <h3 class="font-weight-light" data-i18n="about.title">Sobre mí</h3>
                 <span class="line mb-5"></span>
-                <h5 class="mb-3">Desarrollador de videjuegos y profesor bilingüe</h5>
-                <p class="mt-20">Estoy actualmente en el último año de mi apasionante grado de desarrollo de videojuegos en la Universidad Complutense de Madrid. Además, imparto clases en inglés sobre programación, robótica y diseño, compartiendo mi entusiasmo por la tecnología con mis estudiantes.
-                    <br> Fuera del aula y del entorno académico, me encanta explorar lugares y paisajes desconocidos. También disfruto restaurando y reparando electrónica antigua, una actividad que combina mi amor por la tecnología, el diseño y la historia.</p>
-                    <a href="assets/imgs/cv-ejg-24_3.pdf" download="Curriculim-Vitae_Enrique-Juan.pdf">
+                <h5 class="mb-3" data-i18n="about.role">Desarrollador de Videojuegos y Software | DevOps y Cloud DevOps | Integración de Sistemas | Consultor Técnico</h5>
+                <p class="mt-20" data-i18n-html="about.summary">Soy desarrollador de software y videojuegos con experiencia como consultor técnico. Mi formación y mis proyectos me han llevado a trabajar con gameplay, físicas, motores, sonido, diseño de niveles, arte 3D y experiencias interactivas. Actualmente combino esa mirada técnica y creativa con el análisis de requisitos, el desarrollo e implantación de soluciones, la integración de sistemas y las prácticas DevOps y Cloud DevOps.
+                    <br><br>Me gusta participar en todo el recorrido de un proyecto: entender el problema, diseñar una solución clara, construirla, probarla y mejorar su entrega. Disfruto resolviendo retos complejos y adaptándome rápidamente a nuevas herramientas y contextos.
+                    <br><br>También me interesan la electrónica y reparación de hardware, el modelado 3D, los proyectos de carpintería y descubrir la historia de otras culturas.</p>
+                    <a href="assets/cv_jul_v6.pdf" download="CV_Enrique-Juan-Gamboa.pdf">
                         <button class="btn btn-outline-danger">
-                            <i class="icon-down-circled2"></i> Descargar mi CV
+                            <i class="icon-down-circled2"></i> <span data-i18n="cv.download">Descargar mi CV</span>
                         </button>
                     </a>
                     
             </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Información personal</h3>
+            <div class="col-lg-5 about-card personal-card">
+                <h3 class="font-weight-light" data-i18n="personal.title">Información personal</h3>
                 <span class="line mb-5"></span>
                 <ul class="mt40 info list-unstyled">
-                    <li><span>Nacimiento</span> : 20/01/2002</li>
-                    <li><span>e-mail</span> : <a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></li>
-                    <li><span>Teléfono</span> : <a href="callto:+34658712293"> (+34) 658712293</a></li>
+                    <li><span data-i18n="personal.birth">Nacimiento</span> : 20/01/2002</li>
+                    <li><span data-i18n="personal.email">e-mail</span> : <a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></li>
+                    <li><span data-i18n="personal.phone">Teléfono</span> : <a href="tel:+34658712293"> (+34) 658712293</a></li>
                 </ul>
                 <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" title="GitHub"target="_blank" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" title="WhatsApp" target="_blank" href= "https://api.whatsapp.com/send/?phone=34658712293"><i class="ti-comment" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" title="WhatsApp" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=34658712293"><i class="ti-comment" aria-hidden="true"></i></a></li>
                 </ul>  
             </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">En qué destaco</h3>
+            <div class="col-12 about-card strengths-card">
+                <h3 class="font-weight-light" data-i18n="strengths.title">En qué destaco</h3>
                 <span class="line mb-5"></span>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-write icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Diseño y Planificación</h6>
-                        <p class="subtitle">Gestión efectiva de planificación y diseño en proyectos.</p>
-                        <hr>
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <div class="strength-icon"><i class="ti-game" aria-hidden="true"></i></div>
+                        <div>
+                            <h6 data-i18n="strengths.gameplayTitle">Programación y Gameplay</h6>
+                            <p class="subtitle" data-i18n="strengths.gameplayText">Mecánicas, físicas, partículas, sonido, controles y ajuste de la sensación de juego.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-vector icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Físicas y Sensación de juego</h6>
-                        <p class="subtitle">Programación de físicas y ajuste de las mismas y control para mejor experiencia de juego. </p>
-                        <hr>
+                    <div class="strength-item">
+                        <div class="strength-icon"><i class="ti-ruler-pencil" aria-hidden="true"></i></div>
+                        <div>
+                            <h6 data-i18n="strengths.artTitle">Diseño y Arte 3D</h6>
+                            <p class="subtitle" data-i18n="strengths.artText">Diseño funcional de niveles, modelado de entornos y optimización de escenarios interactivos.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-map-alt icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Diseño Artístico y Funcional de Mapas y Niveles </h6>
-                        <p class="subtitle">Planteamiento, dibujado, modelado y estructuración de mapas y/o niveles</p>
-                        <hr>
+                    <div class="strength-item">
+                        <div class="strength-icon"><i class="ti-control-shuffle" aria-hidden="true"></i></div>
+                        <div>
+                            <h6 data-i18n="strengths.integrationTitle">Desarrollo e Integración</h6>
+                            <p class="subtitle" data-i18n="strengths.integrationText">Soluciones conectadas, workflows y desarrollo con Python, JavaScript, C#, C++ y SQL.</p>
+                        </div>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon"><i class="ti-cloud-up" aria-hidden="true"></i></div>
+                        <div>
+                            <h6 data-i18n="strengths.devopsTitle">DevOps y Sistemas</h6>
+                            <p class="subtitle" data-i18n="strengths.devopsText">Automatización, despliegues, control de versiones, Docker, Linux y soporte cloud.</p>
+                        </div>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon"><i class="ti-light-bulb" aria-hidden="true"></i></div>
+                        <div>
+                            <h6 data-i18n="strengths.analysisTitle">Análisis y Planificación</h6>
+                            <p class="subtitle" data-i18n="strengths.analysisText">Resolución de problemas, diseño de soluciones, gestión de riesgos y seguimiento de objetivos.</p>
+                        </div>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon"><i class="ti-comments" aria-hidden="true"></i></div>
+                        <div>
+                            <h6 data-i18n="strengths.teamTitle">Comunicación y Equipo</h6>
+                            <p class="subtitle" data-i18n="strengths.teamText">Comunicación técnica bilingüe, trabajo colaborativo y aprendizaje autónomo.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,89 +162,95 @@
     <!-- Portfolio Section -->
     <section class="section bg-custom-gray" id="portfolio">
         <div class="container">
-            <h1 class="mb-5">Portfolio</h1>
+            <h1 class="mb-5 section-title" data-i18n="portfolio.title">Portfolio</h1>
             <div class="portfolio">
-                <div class="filters">
-                    <a href="#" data-filter=".new" class="active">
-                        Algunos<br>proyectos
-                    </a>
-                    <a href="#" data-filter=".advertising">
-                        Un poco<br>de arte
-                    </a>
-                    <a href="#" data-filter=".branding">
-                         Ejemplos de código
-                    </a>
+                <div class="filters" aria-label="Filtros del portfolio" data-i18n-aria-label="portfolio.filtersLabel">
+                    <a href="#" data-filter=".new" class="active" data-i18n="portfolio.projectsFilter">Algunos proyectos</a>
+                    <a href="#" data-filter=".advertising" data-i18n="portfolio.artFilter">Un poco de arte</a>
+                    <a href="#" data-filter=".branding" data-i18n="portfolio.codeFilter">Ejemplos de código</a>
                 </div>
                 <div class="portfolio-container"> 
-                    <div class="col-md-6 col-lg-4 new">
+                    <div class="portfolio-grid-sizer" aria-hidden="true"></div>
+                    <div class="col-md-12 col-lg-6 new portfolio-featured portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/EcDayO.gif" class="img-fluid" alt="Ascenso de Riquezas">
+                            <img src="assets/imgs/tfg.png" class="img-fluid" alt="LLMAttorney">
                             <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/EcDayO.gif"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="https://nacho-del-castillo.itch.io/alla-arriba" target="_blank">Ascenso de Riquezas</a></h6>
-                                    <p class="subtitle">Animaciones, mecánica de juego</p>
-                                    <p class="subtitle">Consigue todo el oro posible sin perder el ascensor!</p>
+                                    <h6 class="title"><a href="https://github.com/miguelNPB/LLMAttorney" target="_blank" rel="noopener noreferrer">LLMAttorney</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.llmAttorneyText">Creación y simulación de casos jurídicos con LLMs para estudiantes de abogacía</p>
                                 </div>
-                            </div>   
-                        </div>             
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 new">
+                    <div class="col-md-12 col-lg-6 new portfolio-featured portfolio-card">
                         <div class="portfolio-item">
                             <img src="assets/imgs/blur-1651316087.gif" class="img-fluid" alt="Project VS 21">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/blur-1651316087.gif"></a>
-                                <div class="text-holder" href="">
-                                    <h6 class="title"><a  href="https://github.com/ivo-hr/project-versus" target="_blank">Project VS 21</a></h6>
-                                    <p class="subtitle">Planificación, gestión, animaciones, balance</p>
-                                    <p class="subtitle">Un platform-fighter con personajes originales, controlable con un mando de NES</p>
+                                <div class="text-holder">
+                                    <h6 class="title"><a href="https://github.com/ivo-hr/project-versus" target="_blank" rel="noopener noreferrer">Project VS 21</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.vsSkills">Planificación, gestión, animaciones, balance</p>
+                                    <p class="subtitle" data-i18n="portfolio.vsText">Un platform-fighter con personajes originales, controlable con un mando de NES</p>
                                 </div>
                             </div> 
                         </div>                         
                     </div>
-                    <div class="col-md-6 col-lg-4 new">
+                    <div class="col-md-6 col-lg-4 new portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/jda6.gif" class="img-fluid" alt="Juego de Autos">
+                            <img src="assets/imgs/EcDayO.gif" class="img-fluid" alt="Ascenso de Riquezas" data-i18n-alt="portfolio.ascensoAlt">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/EcDayO.gif"></a>
+                                <div class="text-holder">
+                                    <h6 class="title"><a href="https://nacho-del-castillo.itch.io/alla-arriba" target="_blank" rel="noopener noreferrer">Ascenso de Riquezas</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.ascensoSkills">Animaciones, mecánica de juego</p>
+                                    <p class="subtitle" data-i18n="portfolio.ascensoText">Consigue todo el oro posible sin perder el ascensor!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 new portfolio-card">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/jda6.gif" class="img-fluid" alt="Juego de Autos" data-i18n-alt="portfolio.carsAlt">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/jda6.gif"></a>
-                                <div class="text-holder" href="">
-                                    <h6 class="title"><a  href="https://github.com/P3-22-23-Grupo6/Juego-De-Autos" target="_blank">Juego de Autos</a></h6>
-                                    <p class="subtitle">Físicas, Componentes, VFX (motor in-house)</p>
-                                    <p class="subtitle">Da la vuelta al circuito lo más rápido posible en este throwback a F-Zero!</p>
+                                <div class="text-holder">
+                                    <h6 class="title"><a href="https://github.com/P3-22-23-Grupo6/Juego-De-Autos" target="_blank" rel="noopener noreferrer">Juego de Autos</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.carsSkills">Físicas, Componentes, VFX (motor in-house)</p>
+                                    <p class="subtitle" data-i18n="portfolio.carsText">Da la vuelta al circuito lo más rápido posible en este throwback a F-Zero!</p>
                                 </div>
                             </div> 
                         </div>                         
                     </div>
-                    <div class="col-md-6 col-lg-4 new">
+                    <div class="col-md-6 col-lg-4 new portfolio-card">
                         <div class="portfolio-item">
                             <img src="assets/imgs/nostamal.png" class="img-fluid" alt="NosTamal">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/nostamal.png"></a>
-                                <div class="text-holder" href="">
-                                    <h6 class="title"><a  href="https://evsanz.itch.io/nostamal" target="_blank">NosTamal</a></h6>
-                                    <p class="subtitle">Arte, Diseño</p>
-                                    <p class="subtitle">Cocina descifrando hieroglíficos con un amigo en este juego online para dos jugadores</p>
+                                <div class="text-holder">
+                                    <h6 class="title"><a href="https://evsanz.itch.io/nostamal" target="_blank" rel="noopener noreferrer">NosTamal</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.nostamalSkills">Arte, Diseño</p>
+                                    <p class="subtitle" data-i18n="portfolio.nostamalText">Cocina descifrando hieroglíficos con un amigo en este juego online para dos jugadores</p>
                                 </div>
                             </div> 
                         </div>                         
                     </div>
-                    <div class="col-md-6 col-lg-4 advertising">
+                    <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
                             <img src="assets/imgs/SpUfm3.png" class="img-fluid" alt="Japanese Bungalow">                         
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/SpUfm3.png"></a>
                                 <div class="text-holder">
                                     <h6 class="title"><a  href="assets/imgs/SpUfm3.png" target="_blank">Japanese bungalow</a></h6>
-                                    <p class="subtitle">Modelado 3D de un concepto de casa y jardín</p>
+                                    <p class="subtitle" data-i18n="portfolio.bungalowText">Modelado 3D de un concepto de casa y jardín</p>
                                 </div>
                             </div>    
                         </div>              
                     </div> 
                     
 
-                    <div class="col-md-6 col-lg-4 advertising"> 
+                    <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/Picture1.jpg" class="img-fluid" alt="Boceto de paisaje">                               
+                            <img src="assets/imgs/Picture1.jpg" class="img-fluid" alt="Boceto de paisaje" data-i18n-alt="portfolio.landscapeAlt">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/Picture1.jpg"></a>
                                 <div class="text-holder">
@@ -204,85 +259,96 @@
                             </div>
                         </div>                                                       
                     </div> 
-                    <div class="col-md-6 col-lg-4 advertising">
+                    <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/IMG_20211209_184738.jpg" class="img-fluid" alt="Maquetado dinámico de un personaje con garrote">       
+                            <img src="assets/imgs/IMG_20211209_184738.jpg" class="img-fluid" alt="Maquetado dinámico de un personaje con garrote" data-i18n-alt="portfolio.hakimboAlt">
                            <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/IMG_20211209_184738.jpg"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="assets/imgs/IMG_20211209_184738.jpg" target="_blank"> Maquetado de golpe sísmico</h6>
-                                    <p class="subtitle">Un personaje mío, Hakimbo, reompiendo el suelo de un golpe con su kanabo</p>
+                                    <h6 class="title"><a href="assets/imgs/IMG_20211209_184738.jpg" target="_blank" data-i18n="portfolio.hakimboTitle">Maquetado de golpe sísmico</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.hakimboText">Un personaje mío, Hakimbo, reompiendo el suelo de un golpe con su kanabo</p>
                                 </div>
                             </div>
                         </div>                                                       
                     </div> 
-                    <div class="col-md-6 col-lg-4 advertising"> 
+                    <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/Picture2.jpg" class="img-fluid" alt="Dragón estilizado">            
+                            <img src="assets/imgs/Picture2.jpg" class="img-fluid" alt="Dragón estilizado" data-i18n-alt="portfolio.dragonAlt">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/Picture2.jpg"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="assets/imgs/Picture2.jpg" target="_blank">Dragón</a></h6>
+                                    <h6 class="title"><a  href="assets/imgs/Picture2.jpg" target="_blank" data-i18n="portfolio.dragonTitle">Dragón</a></h6>
                                 </div>
                             </div>
                         </div>
                     </div> 
-                    <div class="col-md-6 col-lg-4 advertising">
+                    <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
                             <img src="assets/imgs/render_w_textures_1.png" class="img-fluid" alt="Nintendo DS Lite">       
                            <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/render_w_textures_1.png"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="assets/imgs/render_w_textures_1.png" target="_blank">Nintendo DS Lite</h6>
-                                    <p class="subtitle">Renderizado low-poly de una consola Nintendo DS Lite que tenía hace un tiempo.</p>
+                                    <h6 class="title"><a href="assets/imgs/render_w_textures_1.png" target="_blank">Nintendo DS Lite</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.dsText">Renderizado low-poly de una consola Nintendo DS Lite que tenía hace un tiempo.</p>
                                 </div>
                             </div>
                         </div>                                                       
                     </div>    
-                    <div class="col-md-6 col-lg-4 advertising">
+                    <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
                             <img src="assets/imgs/lcs.png" class="img-fluid" alt="Human body sculpt">       
                            <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/lcs.png"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="assets/imgs/lcs.png" target="_blank">Modelado de cuerpo humano</h6>
+                                    <h6 class="title"><a href="assets/imgs/lcs.png" target="_blank" data-i18n="portfolio.bodyTitle">Modelado de cuerpo humano</a></h6>
                                 </div>
                             </div>
                         </div>                                                       
                     </div>    
-                    <div class="col-md-6 col-lg-4 branding">
+                    <div class="col-md-12 col-lg-8 branding portfolio-card portfolio-featured portfolio-code-featured">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/BOAT.png" class="img-fluid" alt="Render reimaginado de la demo de mis físicas">  
+                            <img src="assets/imgs/tfg2.png" class="img-fluid" alt="Generación e integración de casos civiles y documentos legales con LLMs" data-i18n-alt="portfolio.llmCodeAlt">
+                            <div class="content-holder">
+                                <div class="text-holder">
+                                    <h6 class="title"><a href="https://github.com/miguelNPB/LLMAttorney" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.llmCodeTitle">Generación e integración de casos civiles y documentos legales desde un LLM al simulador</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.llmCodeText">Integración de LLMs a un simulador de casos civiles para generar casos y documentos, incluyendo el pipeline, prompt-engineering, contexto e interacción usuario-simulador-LLM.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 branding portfolio-card portfolio-code-side">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/BOAT.png" class="img-fluid" alt="Render reimaginado de la demo de mis físicas" data-i18n-alt="portfolio.physicsAlt">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/BOAT.png"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="https://github.com/ivo-hr/SFV_22-23" target="_blank">Simulación física de varios elementos</h6>
-                                    <p class="subtitle">Un proyecto en C++ para mi asignatura de física en el que  simulé gravedad, vientos, resistencia, partículas y flotabilidad en distintos medios. </p>
-                                    <p class="subtitle">Cuenta con una demo jugable que muestra estos elementos de manera básica, "El barquito vago"</p>
+                                    <h6 class="title"><a href="https://github.com/ivo-hr/SFV_22-23" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.physicsTitle">Simulación física de varios elementos</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.physicsText">Pequeño proyecto en C++ para probar gravedad, vientos, resistencia, partículas y flotabilidad en distintos medios. </p>
+                                    <p class="subtitle" data-i18n="portfolio.physicsDemo">Tiene una pequeña demo jugable, "El barquito vago"</p>
                                 </div>
                             </div>
                         </div>                                                     
                     </div> 
-                    <div class="col-md-6 col-lg-4 branding">
+                    <div class="col-md-6 col-lg-4 branding portfolio-card portfolio-code-side">
                         <div class="portfolio-item">
                             <img src="assets/imgs/Ulf5sf.png" class="img-fluid" alt="LocoMotor!">   
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/Ulf5sf.png"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="https://github.com/P3-22-23-Grupo6/LocoMotor" target="_blank">Transformación de coordenadas y unidades físicas, partículas</h6>
-                                    <p class="subtitle">Realicé la traducción de vectores, velocidades y unidades entre los diferentes elementos de nuestro motor, además de programar las partículas presentes en el escenario y jugador.</p>
+                                    <h6 class="title"><a href="https://github.com/P3-22-23-Grupo6/LocoMotor" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.coordinatesTitle">Transformación de coordenadas y unidades físicas, partículas</a></h6>
+                                    <p class="subtitle" data-i18n="portfolio.coordinatesText">Traducción de vectores, velocidades y unidades entre los diferentes elementos de nuestro motor, además de partículas presentes en el escenario y jugador.</p>
                                 </div>
                             </div>
                         </div>                                                    
                     </div> 
-                    <div class="col-md-6 col-lg-4 branding">
+                    <div class="col-md-6 col-lg-4 branding portfolio-card">
                         <div class="portfolio-item">
                             <img src="assets/imgs/pvs.png" class="img-fluid" alt="Project:VS21">                      
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/pvs.png"></a>
                                 <div class="text-holder">
-                                    <h6 class="title"><a  href="https://github.com/ivo-hr/project-versus" target="_blank">Sonido, escenarios</h6>
-                                        <p class="subtitle">Programé con SDL2 la reproducción de sonido al compas con movimientos, con código capaz de adelantar/atrasarlo frames y mandarlo por diferentes altavoces. También realicé los encenarios.</p>
+                                    <h6 class="title"><a href="https://github.com/ivo-hr/project-versus" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.audioTitle">Sonido, gameplay, escenarios</a></h6>
+                                        <p class="subtitle" data-i18n-html="portfolio.audioText">Reproducción con SDL2 de sonido al compás con movimientos, ajuste de latencia y output. <br> Arquitectura de escenarios y movimientos de personaje.</p>
                                     </div>
                             </div>
                         </div>    
@@ -292,124 +358,128 @@
         </div>            
     </section>
     <!-- End of portfolio section -->
-</a>
     <!--Resume Section-->
     <section class="section" id="resume">
-        <div class="container">
-            <h2 class="mb-5">Mi CV</h2>
+        <div class="container resume-container">
+            <h2 class="mb-5 section-title" data-i18n="cv.title">Mi CV</h2>
             <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
+                <div class="col-md-12 col-xl-5">
+                    <div class="card career-card">
                        <div class="card-header">
                             <div class="mt-2">
-                                <h4>Carrera Profesional</h4>
+                                <h4 data-i18n="cv.careerTitle">Carrera Profesional</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="title text-danger">Profesor de Diseño, Robótica y Programación en inglés y español - Robots in Action</h6>
-                            <P>Q1 2023 - Presente</P>
-                            <P class="subtitle">Imparto clases de programación en diversos lenguajes como Python, HTML y Roblox Lua a alumnos
-                                de primaria y ESO. También ejerzo como profesor y monitor en campamentos de verano de inmersión lingüística
-                                en inglés, los cuales tratan sobre diseño de videojuegos y robótica con LEGO Spike.</P>
+                            <h6 class="title text-danger" data-i18n="cv.qubiqTitle">Consultor Técnico - QubiQ</h6>
+                            <p data-i18n="cv.qubiqDate">Julio 2025 - Actual | Madrid, España</p>
+                            <p class="subtitle" data-i18n-html="cv.qubiqText"><strong>Desarrollo e integración de soluciones sobre Odoo</strong> con <strong>Python, JavaScript y XML</strong>. <strong>Análisis funcional, GAP Analysis y definición de requisitos</strong>, diseño de workflows y modelado de procesos. Desarrollo de funcionalidades, resolución de incidencias y documentación técnica. Participación en tareas de <strong>DevOps y Cloud DevOps</strong>, automatización de despliegues y mejora de procesos de entrega bajo metodología ágil <strong>QGo</strong>.</p>
                             <hr>
-                            <h6 class="title text-danger">Diseñador de entornos 3D e Interactividad - Oubita</h6>
-                            <P>Q1 2022 - Q3 2022</P>
-                            <P class="subtitle">Asignado a crear la presencia de la compañía en diferentes plataformas de metaverso.</P>
+                            <h6 class="title text-danger" data-i18n="cv.teacherTitle">Profesor de Robótica, Diseño y Programación bilingüe - Robots in Action</h6>
+                            <p data-i18n="cv.teacherDate">Febrero 2023 - Marzo 2025 | España</p>
+                            <p class="subtitle" data-i18n-html="cv.teacherText">Impartición de <strong>programación, robótica y diseño en español e inglés</strong>, adaptando contenidos a distintos niveles. Refuerzo de la <strong>comunicación técnica</strong>, resolución de dudas y seguimiento del aprendizaje. Planificación de sesiones, materiales y objetivos a corto y medio plazo.</p>
                             <hr>
-                            <h6 class="title text-danger">Clases particulares</h6>
-                            <P>2020 - Presente</P>
-                            <P class="subtitle">Ofrezco clases tanto de inglés conversacional a nivel C2 para varias personas como de matemáticas para alumos
-                                de ESO. Durante el confinamiento impartí dichas clases online, añadiendo física e historia de 2o de Bachillerato.</P>
+                            <h6 class="title text-danger" data-i18n="cv.oubitaTitle">Diseñador de Metaverso - Oubita</h6>
+                            <p data-i18n="cv.oubitaDate">Febrero 2022 - Octubre 2022 | Alcobendas, España</p>
+                            <p class="subtitle" data-i18n-html="cv.oubitaText"><strong>Programación, integración y despliegue de entornos virtuales multiplataforma</strong>. Optimización de modelos y rendimiento para asegurar estabilidad, junto con <strong>control de versiones</strong>, preparación de demos técnicas y validación de requisitos.</p>
+                            <hr>
+                            <h6 class="title text-danger" data-i18n="cv.freelanceTitle">Técnico de Sistemas y Diagnóstico de Hardware - Particular / Freelance</h6>
+                            <p data-i18n="cv.freelanceDate">Junio 2017 - Actual | Colmenar Viejo, España</p>
+                            <p class="subtitle" data-i18n-html="cv.freelanceText"><strong>Montaje, optimización, diagnóstico y mantenimiento</strong> de ordenadores y electrónica de consumo. Resolución de incidencias de <strong>hardware, redes básicas y sistemas operativos</strong>, con aprendizaje continuo mediante documentación técnica.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card education-card">
                        <div class="card-header">
                             <div class="mt-2">
-                                <h4>Educación</h4>
+                                <h4 data-i18n="cv.educationTitle">Educación</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="title text-danger">Grado en Desarrollo de Videojuegos<br> - UCM</h6>
-                            <P>2020 - Presente</P>
-                            <P class="subtitle">Actualmente en mi último año de carrera, y esperando al siguiente para hacer el Trabajo de Fin de Grado</P>
+                            <h6 class="title text-danger" data-i18n-html="cv.degreeTitle">Grado en Desarrollo de Videojuegos<br> - UCM</h6>
+                            <p data-i18n="cv.degreeDate">Septiembre 2020 - Junio 2026 | Madrid, España</p>
+                            <p class="subtitle" data-i18n-html="cv.degreeText"><strong>Universidad Complutense de Madrid, Facultad de Informática.</strong> Trabajo Fin de Grado: <strong>LLMAttorney</strong>, proyecto de creación y simulación de casos jurídicos con LLMs presentado por la UCM en el <strong>V Congreso Español de Videojuegos 2026</strong>.</p>
                             <hr>
-                            <h6 class="title text-danger">Ingeniería informática <br> - Technological University of Dublin</h6>
-                            <P>2023- 2024</P>
-                            <P class="subtitle">Durante mi estancia Erasmus, cursé ingeniería informática y apredí diferentes maneras de trabajar y colaborar en equipo.</P>
-
+                            <h6 class="title text-danger" data-i18n-html="cv.tudTitle">Ingeniería Informática<br> - Technological University Dublin</h6>
+                            <p data-i18n="cv.tudDate">Septiembre 2023 - Junio 2024 | Dublín, Irlanda</p>
+                            <p class="subtitle" data-i18n-html="cv.tudText"><strong>Formación internacional en Ingeniería Informática</strong> y colaboración en equipos multiculturales.</p>
+                            <hr>
+                            <h6 class="title text-danger" data-i18n-html="cv.icaiTitle">Curso de Ingeniería Electrónica<br> - ICAI</h6>
+                            <p data-i18n="cv.icaiDate">Julio 2017 | Madrid, España</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
+                <div class="col-md-6 col-xl-3">
+                    <div class="card technical-card">
+                        <div class="card-header">
                             <div class="pull-left">
-                                <h4 class="mt-2">Habilidades</h4>
+                                <h4 class="mt-2" data-i18n="cv.technicalTitle">Competencias técnicas</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
                         <div class="card-body pb-2">
-                           <h6>Unity</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 86%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Unreal Engine 4</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 71%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>C#</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 87%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>C++</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Python</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Blender</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 71%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <h6 class="text-danger tech-category-title" data-i18n="cv.languagesTitle">Lenguajes</h6>
+                            <p class="subtitle">Python | JavaScript | SQL | C# | C++ | Lua | HTML | CSS</p>
+                            <hr>
+                            <h6 class="text-danger tech-category-title" data-i18n="cv.devopsSystemsTitle">DevOps y Sistemas</h6>
+                            <p class="subtitle" data-i18n="cv.devopsSystemsText">Git | GitHub | GitLab | Docker | Linux | Redes | Diagnóstico de hardware</p>
+                            <hr>
+                            <h6 class="text-danger tech-category-title" data-i18n="cv.methodologiesTitle">Metodologías</h6>
+                            <p class="subtitle" data-i18n="cv.methodologiesText">Scrum | Agile | Kanban | Gestión de riesgos | Documentación técnica</p>
+                            <hr>
+                            <h6 class="text-danger tech-category-title" data-i18n="cv.toolsTitle">Herramientas</h6>
+                            <p class="subtitle">Unity | Blender</p>
                         </div>
                     </div>
                     <div class="card">
                        <div class="card-header">
                             <div class="pull-left">
-                                <h4 class="mt-2">Idiomas</h4>
+                                <h4 class="mt-2" data-i18n="cv.spokenLanguagesTitle">Idiomas</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
                         <div class="card-body pb-2">
-                           <h6>Inglés</h6>
+                            <h6 data-i18n="cv.englishLevel">Inglés - Nativo</h6>
                             <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>Español</h6>
+                            <h6 data-i18n="cv.spanishLevel">Español - Nativo</h6>
                             <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Alemán</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 22%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         
+                    </div>
+                    <div class="card professional-skills-card">
+                        <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2" data-i18n="cv.professionalSkillsTitle">Competencias profesionales</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="cv-tags list-unstyled">
+                                <li data-i18n="cv.skillProblemSolving">Resolución de problemas</li>
+                                <li data-i18n="cv.skillAnalytical">Pensamiento analítico</li>
+                                <li data-i18n="cv.skillLateral">Pensamiento lateral</li>
+                                <li data-i18n="cv.skillTeamwork">Trabajo en equipo</li>
+                                <li data-i18n="cv.skillTime">Gestión del tiempo</li>
+                                <li data-i18n="cv.skillIndependent">Aprendizaje autónomo</li>
+                                <li data-i18n="cv.skillCommunication">Comunicación técnica</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             
         </div>
-        <section class="section text-center" >
-            <a href="assets/imgs/cv-ejg-24_3.pdf" download="Curriculim-Vitae_Enrique-Juan.pdf">
+        <section class="section text-center resume-download">
+            <a href="assets/cv_jul_v6.pdf" download="CV_Enrique-Juan-Gamboa.pdf">
                 <button class="btn btn-outline-danger">
-                    <i class="icon-down-circled2"></i> Descargar mi CV
+                    <i class="icon-down-circled2"></i> <span data-i18n="cv.download">Descargar mi CV</span>
                 </button>
             </a>
         </section>
@@ -427,13 +497,13 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-info-card">
-                        <h4 class="contact-title">Contacto</h4>
+                        <h4 class="contact-title" data-i18n="contact.title">Contacto</h4>
                         <div class="row mb-2">
                             <div class="col-1 pt-1 mr-1">
                                 <i class="ti-mobile icon-md"></i>
                             </div>
                             <div class="col-10 ">
-                                <h6 class="d-inline">Teléfono : <br> <span class="text-muted"><a href="callto:+34658712293"> (+34) 658712293</a></span></h6>
+                                <h6 class="d-inline"><span data-i18n="contact.phone">Teléfono</span> : <br> <span class="text-muted"><a href="tel:+34658712293"> (+34) 658712293</a></span></h6>
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -441,7 +511,7 @@
                                 <i class="ti-comment icon-md"></i>
                             </div>
                             <div class="col-10">
-                                <h6 class="d-inline">Discord :<br><span class="text-muted"><a href="https://discordapp.com/users/399967887449915392" target="_blank">_iv0</a></span></h6>
+                                <h6 class="d-inline"><span data-i18n="contact.discord">Discord</span> :<br><span class="text-muted"><a href="https://discordapp.com/users/399967887449915392" target="_blank" rel="noopener noreferrer">_iv0</a></span></h6>
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -449,13 +519,13 @@
                                 <i class="ti-envelope icon-md"></i>
                             </div>
                             <div class="col-10">
-                                <h6 class="d-inline">e-mail :<br> <span class="text-muted"><a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></span></h6>
+                                <h6 class="d-inline"><span data-i18n="contact.email">e-mail</span> :<br> <span class="text-muted"><a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></span></h6>
                             </div>
                         </div>
                         <ul class="social-icons pt-4">
-                            <li class="social-item"><a class="social-link text-dark" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" title="GitHub"target="_blank" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" title="WhatsApp" target="_blank" href= "https://api.whatsapp.com/send/?phone=34658712293"><i class="ti-comment" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" title="WhatsApp" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=34658712293"><i class="ti-comment" aria-hidden="true"></i></a></li>
                         
                         
                         </ul> 
@@ -468,7 +538,7 @@
     <footer class="footer py-3">
         <div class="container">
             <p class="small mb-0 text-light">
-                Created by <a href="#about">Enrique Juan</a>, and big thanks to <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> for the template!
+                <span data-i18n="footer.createdBy">Creado por</span> <a href="#about">Enrique Juan</a><span data-i18n="footer.thanks">, con un agradecimiento especial a</span> <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Temas y paneles de Bootstrap 4" data-i18n-title="footer.devcrudTitle">DevCRUD</span></a> <span data-i18n="footer.template">por la plantilla.</span>
             </p>
         </div>
     </footer>
@@ -486,6 +556,8 @@
 
     <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/interactions.js"></script>
 
 </body>
 </html>

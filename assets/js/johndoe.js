@@ -12,46 +12,68 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// smooth scroll
-$(document).ready(function(){
+// Smooth scroll with the sticky navigation height taken into account.
+$(document).ready(function() {
     $(".navbar .nav-link").on('click', function(event) {
-
         if (this.hash !== "") {
-
             event.preventDefault();
 
             var hash = this.hash;
+            var target = $(hash);
+            var navbarHeight = $(".navbar").outerHeight() || 0;
 
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 700, function(){
-                window.location.hash = hash;
+            if (!target.length) {
+                return;
+            }
+
+            var targetPosition = hash === "#home"
+                ? 0
+                : Math.max(0, target.offset().top - navbarHeight + 1);
+
+            $('html, body').stop().animate({
+                scrollTop: targetPosition
+            }, 620, function() {
+                if (window.history && window.history.pushState) {
+                    window.history.pushState(null, "", hash);
+                }
             });
-        } 
+        }
     });
 });
 
-// protfolio filters
+// Portfolio filters and a responsive masonry grid.
 $(window).on("load", function() {
     var t = $(".portfolio-container");
+
     t.isotope({
+        itemSelector: ".portfolio-card",
         filter: ".new",
-        animationOptions: {
-            duration: 750,
-            easing: "linear",
-            queue: !1
-        }
-    }), $(".filters a").click(function() {
-        $(".filters .active").removeClass("active"), $(this).addClass("active");
-        var i = $(this).attr("data-filter");
-        return t.isotope({
-            filter: i,
-            animationOptions: {
-                duration: 750,
-                easing: "linear",
-                queue: !1
-            }
-        }), !1
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".portfolio-grid-sizer"
+        },
+        transitionDuration: "0.55s"
+    });
+
+    $(".filters a").click(function() {
+        $(".filters .active").removeClass("active");
+        $(this).addClass("active");
+
+        var filter = $(this).attr("data-filter");
+
+        t.isotope({
+            filter: filter
+        });
+
+        return false;
+    });
+
+    var resizeTimer;
+
+    $(window).on("resize", function() {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(function() {
+            t.isotope("layout");
+        }, 120);
     });
 });
-
