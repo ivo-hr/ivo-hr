@@ -47,9 +47,6 @@
                     <a class="btn btn-outline-light hero-cta" href="#resume" data-i18n="hero.experienceCta">Ver experiencia</a>
                 </div>
             </div>
-            <a class="scroll-cue" href="#about" aria-label="Ir a la sección Sobre mí" data-i18n-aria-label="hero.scrollCue">
-                <span></span>
-            </a>
         </div>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
@@ -98,14 +95,33 @@
                 <h3 class="font-weight-light" data-i18n="personal.title">Información personal</h3>
                 <span class="line mb-5"></span>
                 <ul class="mt40 info list-unstyled">
-                    <li><span data-i18n="personal.birth">Nacimiento</span> : 20/01/2002</li>
-                    <li><span data-i18n="personal.email">e-mail</span> : <a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></li>
-                    <li><span data-i18n="personal.phone">Teléfono</span> : <a href="tel:+34658712293"> (+34) 658712293</a></li>
+                    <li>
+                        <span class="personal-info-label"><i class="ti-location-pin" aria-hidden="true"></i><span data-i18n="personal.location">Ubicación</span></span>
+                        <span class="personal-info-value" data-i18n="personal.locationValue">Madrid, España</span>
+                    </li>
+                    <li>
+                        <span class="personal-info-label"><i class="ti-briefcase" aria-hidden="true"></i><span data-i18n="personal.workMode">Modalidad</span></span>
+                        <span class="personal-info-value" data-i18n="personal.workModeValue">Presencial · Híbrido · Remoto</span>
+                    </li>
+                    <li>
+                        <span class="personal-info-label"><i class="ti-email" aria-hidden="true"></i><span data-i18n="personal.email">Email</span></span>
+                        <span class="personal-info-value"><a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></span>
+                    </li>
+                    <li>
+                        <span class="personal-info-label"><i class="ti-mobile" aria-hidden="true"></i><span data-i18n="personal.phone">Teléfono</span></span>
+                        <span class="personal-info-value"><a href="tel:+34658712293">(+34) 658 712 293</a></span>
+                    </li>
                 </ul>
                 <ul class="social-icons pt-3">
                     <li class="social-item"><a class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
                     <li class="social-item"><a class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" title="WhatsApp" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=34658712293"><i class="ti-comment" aria-hidden="true"></i></a></li>
+                    <li class="social-item">
+                        <a class="social-link" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=34658712293">
+                            <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>  
             </div>
             <div class="col-12 about-card strengths-card">
@@ -374,19 +390,19 @@
                         <div class="card-body">
                             <h6 class="title text-danger" data-i18n="cv.qubiqTitle">Consultor Técnico - QubiQ</h6>
                             <p data-i18n="cv.qubiqDate">Julio 2025 - Actual | Madrid, España</p>
-                            <p class="subtitle" data-i18n-html="cv.qubiqText"><strong>Desarrollo e integración de soluciones sobre Odoo</strong> con <strong>Python, JavaScript y XML</strong>. <strong>Análisis funcional, GAP Analysis y definición de requisitos</strong>, diseño de workflows y modelado de procesos. Desarrollo de funcionalidades, resolución de incidencias y documentación técnica. Participación en tareas de <strong>DevOps y Cloud DevOps</strong>, automatización de despliegues y mejora de procesos de entrega bajo metodología ágil <strong>QGo</strong>.</p>
+                            <p class="subtitle" data-i18n-html="cv.qubiqText"><strong>Desarrollo e integración de soluciones sobre Odoo</strong> con <strong>Python, JavaScript y XML</strong>.<br><strong>Análisis funcional, GAP Analysis y definición de requisitos</strong>, diseño de workflows y modelado de procesos.<br>Desarrollo de funcionalidades, resolución de incidencias y documentación técnica.<br>Participación en tareas de <strong>DevOps y Cloud DevOps</strong>, automatización de despliegues y mejora de procesos de entrega bajo metodología ágil <strong>QGo</strong>.</p>
                             <hr>
                             <h6 class="title text-danger" data-i18n="cv.teacherTitle">Profesor de Robótica, Diseño y Programación bilingüe - Robots in Action</h6>
                             <p data-i18n="cv.teacherDate">Febrero 2023 - Marzo 2025 | España</p>
-                            <p class="subtitle" data-i18n-html="cv.teacherText">Impartición de <strong>programación, robótica y diseño en español e inglés</strong>, adaptando contenidos a distintos niveles. Refuerzo de la <strong>comunicación técnica</strong>, resolución de dudas y seguimiento del aprendizaje. Planificación de sesiones, materiales y objetivos a corto y medio plazo.</p>
+                            <p class="subtitle" data-i18n-html="cv.teacherText">Impartición de <strong>programación, robótica y diseño en español e inglés</strong>, adaptando contenidos a distintos niveles.<br>Refuerzo de la <strong>comunicación técnica</strong>, resolución de dudas y seguimiento del aprendizaje.<br>Planificación de sesiones, materiales y objetivos a corto y medio plazo.</p>
                             <hr>
                             <h6 class="title text-danger" data-i18n="cv.oubitaTitle">Diseñador de Metaverso - Oubita</h6>
                             <p data-i18n="cv.oubitaDate">Febrero 2022 - Octubre 2022 | Alcobendas, España</p>
-                            <p class="subtitle" data-i18n-html="cv.oubitaText"><strong>Programación, integración y despliegue de entornos virtuales multiplataforma</strong>. Optimización de modelos y rendimiento para asegurar estabilidad, junto con <strong>control de versiones</strong>, preparación de demos técnicas y validación de requisitos.</p>
+                            <p class="subtitle" data-i18n-html="cv.oubitaText"><strong>Programación, integración y despliegue de entornos virtuales multiplataforma</strong>.<br>Optimización de modelos y rendimiento para asegurar estabilidad, junto con <strong>control de versiones</strong>, preparación de demos técnicas y validación de requisitos.</p>
                             <hr>
                             <h6 class="title text-danger" data-i18n="cv.freelanceTitle">Técnico de Sistemas y Diagnóstico de Hardware - Particular / Freelance</h6>
                             <p data-i18n="cv.freelanceDate">Junio 2017 - Actual | Colmenar Viejo, España</p>
-                            <p class="subtitle" data-i18n-html="cv.freelanceText"><strong>Montaje, optimización, diagnóstico y mantenimiento</strong> de ordenadores y electrónica de consumo. Resolución de incidencias de <strong>hardware, redes básicas y sistemas operativos</strong>, con aprendizaje continuo mediante documentación técnica.</p>
+                            <p class="subtitle" data-i18n-html="cv.freelanceText"><strong>Montaje, optimización, diagnóstico y mantenimiento</strong> de ordenadores y electrónica de consumo.<br>Resolución de incidencias de <strong>hardware, redes básicas y sistemas operativos</strong>, con aprendizaje continuo mediante documentación técnica.</p>
                         </div>
                     </div>
                 </div>
@@ -401,7 +417,7 @@
                         <div class="card-body">
                             <h6 class="title text-danger" data-i18n-html="cv.degreeTitle">Grado en Desarrollo de Videojuegos<br> - UCM</h6>
                             <p data-i18n="cv.degreeDate">Septiembre 2020 - Junio 2026 | Madrid, España</p>
-                            <p class="subtitle" data-i18n-html="cv.degreeText"><strong>Universidad Complutense de Madrid, Facultad de Informática.</strong> Trabajo Fin de Grado: <strong>LLMAttorney</strong>, proyecto de creación y simulación de casos jurídicos con LLMs presentado por la UCM en el <strong>V Congreso Español de Videojuegos 2026</strong>.</p>
+                            <p class="subtitle" data-i18n-html="cv.degreeText"><strong>Universidad Complutense de Madrid, Facultad de Informática.</strong><br>Trabajo Fin de Grado: <strong>LLMAttorney</strong>, proyecto de creación y simulación de casos jurídicos con LLMs presentado por la UCM en el <strong>V Congreso Español de Videojuegos 2026</strong>.</p>
                             <hr>
                             <h6 class="title text-danger" data-i18n-html="cv.tudTitle">Ingeniería Informática<br> - Technological University Dublin</h6>
                             <p data-i18n="cv.tudDate">Septiembre 2023 - Junio 2024 | Dublín, Irlanda</p>
@@ -409,6 +425,24 @@
                             <hr>
                             <h6 class="title text-danger" data-i18n-html="cv.icaiTitle">Curso de Ingeniería Electrónica<br> - ICAI</h6>
                             <p data-i18n="cv.icaiDate">Julio 2017 | Madrid, España</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2" data-i18n="cv.spokenLanguagesTitle">Idiomas</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                            <h6 data-i18n="cv.englishLevel">Inglés - Nativo</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6 data-i18n="cv.spanishLevel">Español - Nativo</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -422,36 +456,47 @@
                         </div>
                         <div class="card-body pb-2">
                             <h6 class="text-danger tech-category-title" data-i18n="cv.languagesTitle">Lenguajes</h6>
-                            <p class="subtitle">Python | JavaScript | SQL | C# | C++ | Lua | HTML | CSS</p>
+                            <ul class="technical-skill-list list-unstyled">
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                                <li>C#</li>
+                                <li>C++</li>
+                                <li>Lua</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
                             <hr>
                             <h6 class="text-danger tech-category-title" data-i18n="cv.devopsSystemsTitle">DevOps y Sistemas</h6>
-                            <p class="subtitle" data-i18n="cv.devopsSystemsText">Git | GitHub | GitLab | Docker | Linux | Redes | Diagnóstico de hardware</p>
+                            <ul class="technical-skill-list list-unstyled">
+                                <li>Git</li>
+                                <li>GitHub</li>
+                                <li>GitLab</li>
+                                <li>Docker</li>
+                                <li>Linux</li>
+                                <li data-i18n="cv.skillNetworking">Redes</li>
+                                <li data-i18n="cv.skillHardwareDiagnostics">Diagnóstico de hardware</li>
+                            </ul>
                             <hr>
                             <h6 class="text-danger tech-category-title" data-i18n="cv.methodologiesTitle">Metodologías</h6>
-                            <p class="subtitle" data-i18n="cv.methodologiesText">Scrum | Agile | Kanban | Gestión de riesgos | Documentación técnica</p>
+                            <ul class="technical-skill-list list-unstyled">
+                                <li>Scrum</li>
+                                <li>Agile</li>
+                                <li>Kanban</li>
+                                <li data-i18n="cv.skillRiskManagement">Gestión de riesgos</li>
+                                <li data-i18n="cv.skillTechnicalDocumentation">Documentación técnica</li>
+                            </ul>
                             <hr>
                             <h6 class="text-danger tech-category-title" data-i18n="cv.toolsTitle">Herramientas</h6>
-                            <p class="subtitle">Unity | Blender</p>
+                            <ul class="technical-skill-list list-unstyled">
+                                <li>Unity</li>
+                                <li>Blender</li>
+                                <li>Odoo</li>
+                                <li>SDL2</li>
+                                <li>Visual Studio</li>
+                                <li>Box2D</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2" data-i18n="cv.spokenLanguagesTitle">Idiomas</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                            <h6 data-i18n="cv.englishLevel">Inglés - Nativo</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6 data-i18n="cv.spanishLevel">Español - Nativo</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        
                     </div>
                     <div class="card professional-skills-card">
                         <div class="card-header">
@@ -486,11 +531,6 @@
     </section>
 
 
-
-    <section class="section bg-dark text-center">
-        
-    </section>
-
     <!-- Contact Section -->
     <div class="section contact" id="contact">
         <div class="container">
@@ -498,37 +538,28 @@
                 <div class="col-lg-4">
                     <div class="contact-info-card">
                         <h4 class="contact-title" data-i18n="contact.title">Contacto</h4>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-mobile icon-md"></i>
-                            </div>
-                            <div class="col-10 ">
-                                <h6 class="d-inline"><span data-i18n="contact.phone">Teléfono</span> : <br> <span class="text-muted"><a href="tel:+34658712293"> (+34) 658712293</a></span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-comment icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline"><span data-i18n="contact.discord">Discord</span> :<br><span class="text-muted"><a href="https://discordapp.com/users/399967887449915392" target="_blank" rel="noopener noreferrer">_iv0</a></span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-envelope icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline"><span data-i18n="contact.email">e-mail</span> :<br> <span class="text-muted"><a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></span></h6>
-                            </div>
-                        </div>
+                        <ul class="contact-info-list list-unstyled">
+
+                            <li>
+                                <span class="contact-info-label"><i class="ti-email" aria-hidden="true"></i><span data-i18n="contact.email">Email</span></span>
+                                <span class="contact-info-value"><a href="mailto:enrique.jg02@gmail.com">enrique.jg02@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <span class="contact-info-label"><i class="ti-mobile" aria-hidden="true"></i><span data-i18n="contact.phone">Teléfono</span></span>
+                                <span class="contact-info-value"><a href="tel:+34658712293">(+34) 658 712 293</a></span>
+                            </li>
+                        </ul>
                         <ul class="social-icons pt-4">
                             <li class="social-item"><a class="social-link text-dark" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
                             <li class="social-item"><a class="social-link text-dark" title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/ivo-hr"><i class="ti-github" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" title="WhatsApp" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=34658712293"><i class="ti-comment" aria-hidden="true"></i></a></li>
-                        
-                        
-                        </ul> 
+                            <li class="social-item">
+                                <a class="social-link text-dark" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=34658712293">
+                                    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
