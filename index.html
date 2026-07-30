@@ -7,15 +7,23 @@
     <meta name="author" content="Enrique J">
     <title>Enrique Juan | Videojuegos, Software y DevOps</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="preload" href="assets/imgs/title_header-background.avif" as="image" type="image/avif" fetchpriority="high">
+    <link rel="preload" href="assets/imgs/title_header-subject.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/vendors/themify-icons/fonts/themify.woff" as="font" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="assets/css/fonts.min.css">
+    <link rel="stylesheet" href="assets/css/icons.min.css">
 
-	<link rel="stylesheet" href="assets/css/johndoe.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/johndoe.min.css">
+    <link rel="stylesheet" href="assets/css/custom.min.css">
 
     <link rel="icon" type="image/png" href="assets/imgs/res1.png">
+
+    <script defer src="assets/vendors/jquery/jquery-3.4.1.min.js"></script>
+    <script defer src="assets/vendors/bootstrap/bootstrap.min.js"></script>
+    <script defer src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script defer src="assets/js/site.min.js"></script>
 </head>
 <body id="home">
     <div class="scroll-progress" aria-hidden="true"></div>
@@ -30,6 +38,15 @@
         </button>
     </div>
     <header class="header">
+        <div class="hero-depth" aria-hidden="true">
+            <picture class="hero-depth-layer hero-depth-background">
+                <source srcset="assets/imgs/title_header-background.avif" type="image/avif">
+                <img class="hero-depth-image" src="assets/imgs/title_header-background.webp" width="1080" height="1456" alt="" decoding="async" fetchpriority="high">
+            </picture>
+            <picture class="hero-depth-layer hero-depth-subject">
+                <img class="hero-depth-image" src="assets/imgs/title_header-subject.webp" width="1080" height="1456" alt="" decoding="async" fetchpriority="high">
+            </picture>
+        </div>
         <div class="container">
             <ul class="social-icons pt-3">
                 <li class="social-item"><a class="social-link text-light" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/enrique-jg2002/"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
@@ -189,7 +206,10 @@
                     <div class="portfolio-grid-sizer" aria-hidden="true"></div>
                     <div class="col-md-12 col-lg-6 new portfolio-featured portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/tfg.png" class="img-fluid" alt="LLMAttorney">
+                            <picture>
+                                <source srcset="assets/imgs/tfg.webp" type="image/webp">
+                                <img src="assets/imgs/tfg.png" class="img-fluid" width="1218" height="688" loading="lazy" decoding="async" alt="LLMAttorney">
+                            </picture>
                             <div class="content-holder">
                                 <div class="text-holder">
                                     <h6 class="title"><a href="https://github.com/miguelNPB/LLMAttorney" target="_blank" rel="noopener noreferrer">LLMAttorney</a></h6>
@@ -200,7 +220,9 @@
                     </div>
                     <div class="col-md-12 col-lg-6 new portfolio-featured portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/blur-1651316087.gif" class="img-fluid" alt="Project VS 21">
+                            <video class="img-fluid portfolio-video" width="960" height="540" autoplay loop muted playsinline preload="none" poster="assets/imgs/blur-1651316087-poster.webp" aria-label="Project VS 21">
+                                <source data-src="assets/media/blur-1651316087.mp4" type="video/mp4">
+                            </video>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/blur-1651316087.gif"></a>
                                 <div class="text-holder">
@@ -213,7 +235,9 @@
                     </div>
                     <div class="col-md-6 col-lg-4 new portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/EcDayO.gif" class="img-fluid" alt="Ascenso de Riquezas" data-i18n-alt="portfolio.ascensoAlt">
+                            <video class="img-fluid portfolio-video" width="800" height="450" autoplay loop muted playsinline preload="none" poster="assets/imgs/EcDayO-poster.webp" aria-label="Ascenso de Riquezas" data-i18n-aria-label="portfolio.ascensoAlt">
+                                <source data-src="assets/media/EcDayO.mp4" type="video/mp4">
+                            </video>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/EcDayO.gif"></a>
                                 <div class="text-holder">
@@ -226,7 +250,9 @@
                     </div>
                     <div class="col-md-6 col-lg-4 new portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/jda6.gif" class="img-fluid" alt="Juego de Autos" data-i18n-alt="portfolio.carsAlt">
+                            <video class="img-fluid portfolio-video" width="720" height="405" autoplay loop muted playsinline preload="none" poster="assets/imgs/jda6-poster.webp" aria-label="Juego de Autos" data-i18n-aria-label="portfolio.carsAlt">
+                                <source data-src="assets/media/jda6.mp4" type="video/mp4">
+                            </video>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/jda6.gif"></a>
                                 <div class="text-holder">
@@ -239,7 +265,10 @@
                     </div>
                     <div class="col-md-6 col-lg-4 new portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/nostamal.png" class="img-fluid" alt="NosTamal">
+                            <picture>
+                                <source srcset="assets/imgs/nostamal.webp" type="image/webp">
+                                <img src="assets/imgs/nostamal.png" class="img-fluid" width="347" height="195" loading="lazy" decoding="async" alt="NosTamal">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/nostamal.png"></a>
                                 <div class="text-holder">
@@ -252,7 +281,10 @@
                     </div>
                     <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/SpUfm3.png" class="img-fluid" alt="Japanese Bungalow">                         
+                            <picture>
+                                <source srcset="assets/imgs/SpUfm3.webp" type="image/webp">
+                                <img src="assets/imgs/SpUfm3.png" class="img-fluid" width="926" height="574" loading="lazy" decoding="async" alt="Japanese Bungalow">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/SpUfm3.png"></a>
                                 <div class="text-holder">
@@ -266,7 +298,10 @@
 
                     <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/Picture1.jpg" class="img-fluid" alt="Boceto de paisaje" data-i18n-alt="portfolio.landscapeAlt">
+                            <picture>
+                                <source srcset="assets/imgs/Picture1.webp" type="image/webp">
+                                <img src="assets/imgs/Picture1.jpg" class="img-fluid" width="736" height="1257" loading="lazy" decoding="async" alt="Boceto de paisaje" data-i18n-alt="portfolio.landscapeAlt">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/Picture1.jpg"></a>
                                 <div class="text-holder">
@@ -277,7 +312,9 @@
                     </div> 
                     <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/IMG_20211209_184738.jpg" class="img-fluid" alt="Maquetado dinámico de un personaje con garrote" data-i18n-alt="portfolio.hakimboAlt">
+                            <picture>
+                                <img src="assets/imgs/IMG_20211209_184738.jpg" class="img-fluid" width="4000" height="3000" loading="lazy" decoding="async" alt="Maquetado dinámico de un personaje con garrote" data-i18n-alt="portfolio.hakimboAlt">
+                            </picture>
                            <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/IMG_20211209_184738.jpg"></a>
                                 <div class="text-holder">
@@ -289,7 +326,10 @@
                     </div> 
                     <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/Picture2.jpg" class="img-fluid" alt="Dragón estilizado" data-i18n-alt="portfolio.dragonAlt">
+                            <picture>
+                                <source srcset="assets/imgs/Picture2.webp" type="image/webp">
+                                <img src="assets/imgs/Picture2.jpg" class="img-fluid" width="439" height="265" loading="lazy" decoding="async" alt="Dragón estilizado" data-i18n-alt="portfolio.dragonAlt">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/Picture2.jpg"></a>
                                 <div class="text-holder">
@@ -300,7 +340,10 @@
                     </div> 
                     <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/render_w_textures_1.png" class="img-fluid" alt="Nintendo DS Lite">       
+                            <picture>
+                                <source srcset="assets/imgs/render_w_textures_1.webp" type="image/webp">
+                                <img src="assets/imgs/render_w_textures_1.png" class="img-fluid" width="1920" height="1080" loading="lazy" decoding="async" alt="Nintendo DS Lite">
+                            </picture>
                            <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/render_w_textures_1.png"></a>
                                 <div class="text-holder">
@@ -312,7 +355,10 @@
                     </div>    
                     <div class="col-md-6 col-lg-4 advertising portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/lcs.png" class="img-fluid" alt="Human body sculpt">       
+                            <picture>
+                                <source srcset="assets/imgs/lcs.webp" type="image/webp">
+                                <img src="assets/imgs/lcs.png" class="img-fluid" width="835" height="1040" loading="lazy" decoding="async" alt="Human body sculpt">
+                            </picture>
                            <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/lcs.png"></a>
                                 <div class="text-holder">
@@ -323,7 +369,10 @@
                     </div>    
                     <div class="col-md-12 col-lg-8 branding portfolio-card portfolio-featured portfolio-code-featured">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/tfg2.png" class="img-fluid" alt="Generación e integración de casos civiles y documentos legales con LLMs" data-i18n-alt="portfolio.llmCodeAlt">
+                            <picture>
+                                <source srcset="assets/imgs/tfg2.webp" type="image/webp">
+                                <img src="assets/imgs/tfg2.png" class="img-fluid" width="1217" height="685" loading="lazy" decoding="async" alt="Generación e integración de casos civiles y documentos legales con LLMs" data-i18n-alt="portfolio.llmCodeAlt">
+                            </picture>
                             <div class="content-holder">
                                 <div class="text-holder">
                                     <h6 class="title"><a href="https://github.com/miguelNPB/LLMAttorney" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.llmCodeTitle">Generación e integración de casos civiles y documentos legales desde un LLM al simulador</a></h6>
@@ -334,7 +383,10 @@
                     </div>
                     <div class="col-md-6 col-lg-4 branding portfolio-card portfolio-code-side">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/BOAT.png" class="img-fluid" alt="Render reimaginado de la demo de mis físicas" data-i18n-alt="portfolio.physicsAlt">
+                            <picture>
+                                <source srcset="assets/imgs/BOAT.webp" type="image/webp">
+                                <img src="assets/imgs/BOAT.png" class="img-fluid" width="1920" height="1080" loading="lazy" decoding="async" alt="Render reimaginado de la demo de mis físicas" data-i18n-alt="portfolio.physicsAlt">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/BOAT.png"></a>
                                 <div class="text-holder">
@@ -347,7 +399,10 @@
                     </div> 
                     <div class="col-md-6 col-lg-4 branding portfolio-card portfolio-code-side">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/Ulf5sf.png" class="img-fluid" alt="LocoMotor!">   
+                            <picture>
+                                <source srcset="assets/imgs/Ulf5sf.webp" type="image/webp">
+                                <img src="assets/imgs/Ulf5sf.png" class="img-fluid" width="347" height="195" loading="lazy" decoding="async" alt="LocoMotor!">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/Ulf5sf.png"></a>
                                 <div class="text-holder">
@@ -359,7 +414,10 @@
                     </div> 
                     <div class="col-md-6 col-lg-4 branding portfolio-card">
                         <div class="portfolio-item">
-                            <img src="assets/imgs/pvs.png" class="img-fluid" alt="Project:VS21">                      
+                            <picture>
+                                <source srcset="assets/imgs/pvs.webp" type="image/webp">
+                                <img src="assets/imgs/pvs.png" class="img-fluid" width="347" height="195" loading="lazy" decoding="async" alt="Project:VS21">
+                            </picture>
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/pvs.png"></a>
                                 <div class="text-holder">
@@ -573,22 +631,6 @@
             </p>
         </div>
     </footer>
-
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Isotope  -->
-    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
-    
-
-    <!-- JohnDoe js -->
-    <script src="assets/js/johndoe.js"></script>
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/interactions.js"></script>
 
 </body>
 </html>
